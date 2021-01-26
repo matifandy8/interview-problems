@@ -104,6 +104,12 @@
 // };
 
 // console.log(reverseText(Text));
+
+// let arreglo = "Hello World".split("");
+// let arreglereverse = arreglo.reverse();
+// let spliaregle = arreglereverse.join("");
+// let stringreverse = spliaregle.toString();
+// console.log(stringreverse);
 // ----------------------------------------
 // Interview amazon
 // let arr1 = [7, 3, 2, 4];
@@ -136,7 +142,73 @@
 // let text = "hola me llamo matias";
 
 // function reversedes(myText) {
-//   return [...myText].reverse().join("");
+//   return myText.split("").reverse().join("");
 // }
 
 // console.log(reversedes(text));
+
+// let arr = [1, 3, 5, 7];
+
+// const dif = (array) => {
+//   let diferencia = array[1] - array[0];
+//   return diferencia;
+// };
+// console.log(dif(arr));
+
+// --------------------------------------
+// function FirstReverse(str) {
+//   var tomatoes = [];
+//   for (i = str.length - 1; i > -1; i--){
+//     tomatoes.push(str[i]);
+//   }
+//   str = tomatoes.join("");
+
+//     return str;
+
+//   }
+// --------------------------------------
+// function FirstFactorial(num) {
+//   return num === 1 ? 1 : num * FirstFactorial(num - 1);
+// }
+// console.log(FirstFactorial(5));
+// ---------------------------
+
+// const words = [1, 2, 3, 4, 5, 6];
+
+// const result = words.filter(word => word/2 === 3);
+
+// console.log(result);
+
+// const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange']
+
+// /**
+//  * Filter array items based on search criteria (query)
+//  */
+// const filterItems = (arr, query) => {
+//   return arr.filter(el => el.toLowerCase().indexOf(query.toLowerCase()) !== -1)
+// }
+
+// console.log(filterItems(fruits, 'ap'))
+// console.log(filterItems(fruits, 'an'))
+
+// --------------------------------
+// let array1 = [1, 2, 2, 4];
+// let resultado1 = 8;
+
+// const sum8 = (arr, resultado) => {
+//   let inferior = 0;
+//   let superior = arr.length - 1;
+//   while (inferior < superior) {
+//     let suma = arr[inferior] + arr[superior];
+//     if (suma === resultado) {
+//       return true;
+//     } else if (suma < resultado) {
+//       inferior += 1;
+//     } else {
+//       superior -= 1;
+//     }
+//   }
+//   return false;
+// };
+
+// console.log(sum8(array1, resultado1));
