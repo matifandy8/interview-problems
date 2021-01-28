@@ -212,3 +212,134 @@
 // };
 
 // console.log(sum8(array1, resultado1));
+
+//ES 5 Syntax Possible Solution:
+
+// function longestString1(arr) {
+// 	var longest = ''; // Step 0
+// 	for (var i = 0; i < arr.length; i++) { // Step 1
+// 		if (arr[i].length > longest.length) { // Step 2 & 3
+// 			longest = arr[i]; // Step 4
+// 		}
+// 	}
+// 	return longest; // Step 5
+// }
+
+//ES 6 Syntax Possible Solution:
+
+// const longestString2 = (arr) => {
+// 	let longest = ''; // Step 0
+// 	arr.forEach((item) => { // Step 1
+// 		if(item.length > longest.length) {
+//             longest = item;
+//         }
+// 	});
+// 	return longest; // Step 5
+// };
+
+// --------------------------------------
+
+// const countingChars = (str) => {
+//     const charCount = {}; //Step 0
+//     let maxCharCount = 0;
+//     let maxChar = '';
+//     for(let i = 0; i < str.length; i++) { // Step 1.
+//         charCount[str[i]] = ++charCount[str[i]] || 1;
+//     }
+
+//     for(let key in charCount) { //Step 2
+//         if(charCount[key] >= maxCharCount) {
+//             maxCharCount = charCount[key] //Step 3
+//             maxChar = key;
+//         }
+//     }
+
+//     return maxChar; //Step 4
+// }
+
+// const anagrams = (str1, str2) => {
+//   if (str1.length !== str2.length) {
+//     //step 1
+//     return false;
+//   }
+//   let sort1 = str1.split("").sort(); // step 2
+//   let sort2 = str2.split("").sort();
+//   return sort1.join("") === sort2.join("");
+// };
+
+// console.log(anagrams("amor", "roma"));
+
+// let string = "oso";
+
+// function ispalindrome(str) {
+//   let strreverse = str.split("").reverse().join("");
+//   if (str === strreverse) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+// console.log(ispalindrome("aibofobia"));
+
+// function isUnique(str) {
+//   const chars = str.split("").sort();
+
+//   for (let i = 1; i < chars.length; i++) {
+//     if (chars[i] === chars[i - 1]) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+// function isUnique(str) {
+//   return new Set(str).size === str.length;
+// }
+
+// ----------- SET ----------------
+// const numeros = [1, 2, 2, 3, 4, 4, 5];
+
+// const numerosUnicos = new Set(numeros);
+
+// console.log(numerosUnicos);
+// ------------ ------------------
+
+// let test = [2, 2, 4, 4, 5];
+
+// const singleNumber = (array) => {
+//   countNumber = {};
+//   for (number of array) {
+//     if (countNumber[number] == undefined) {
+//       countNumber[number] = 1;
+//     } else {
+//       countNumber[number]++;
+//     }
+//     console.log(countNumber);
+//   }
+//   for (numberKey in countNumber) {
+//     if (countNumber[numberKey] == 1) {
+//       return numberKey;
+//     }
+//   }
+// };
+
+// ----------------------------------
+
+// CON Set()
+
+// let test = [2, 2, 4, 4, 5];
+
+// const singleNumber = (array) => {
+//   countSet = new Set();
+//   for (number of array) {
+//     if (countSet.has(number)) {
+//       countSet.delete(number);
+//     } else {
+//       countSet.add(number);
+//     }
+//   }
+//   return Array.from(countSet);
+// };
+// console.log(singleNumber(test));
