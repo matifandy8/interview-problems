@@ -1,12 +1,9 @@
 // function convert(num) {
-//   let string = num
-//     .toString() // convert number to string
-//     .split("")
-//     .sort(); // convert string to array of characters
-//   numreverse = string.reverse();
-//   arrayOfNumbers = numreverse.map(Number);
+//   let array = Array.from(String(num), Number);
+//   console.log(array);
+//   let siblingsort = array.sort().reverse().toString().split(",").join("");
 
-//   return arrayOfNumbers;
+//   return Number(siblingsort);
 // }
 
 // console.log(convert(231));
@@ -343,3 +340,54 @@
 //   return Array.from(countSet);
 // };
 // console.log(singleNumber(test));
+
+// function calcLenght(A) {
+//   let output = [];
+//   let firstValue = A[0];
+//   output.push[firstValue];
+
+//   for (let i = 0; i < A.length; i++) {
+//     let toAdd = A[i];
+
+//     if (toAdd !== -1) {
+//       output.push(A[toAdd]);
+//     } else {
+//       output.push(-1);
+//       return output.length;
+//     }
+//   }
+//   return output.length;
+// }
+
+// let twoSum = function(nums, target) {
+//     const map = new Map();
+//     for(let i = 0; i < nums.length; i++){
+//         let currvalue = nums[i];
+//         if(map.has(currvalue)){
+//            return [map.get(currvalue), i];
+//            }
+//         let diff = target - currvalue;
+//         map.set(diff, i);
+//     }
+
+// };
+// for (var i=1; i <= 20; i++)
+// {
+//     if (i % 15 == 0)
+//         console.log("FizzBuzz");
+//     else if (i % 3 == 0)
+//         console.log("Fizz");
+//     else if (i % 5 == 0)
+//         console.log("Buzz");
+//     else
+//         console.log(i);
+// }
+
+// for (var i = 1; i <= 100; i++) {
+//     var f = i % 3 == 0, b = i % 5 == 0;
+//     console.log(f ? b ? "FizzBuzz" : "Fizz" : b ? "Buzz" : i);
+//   }
+//   for (var i = 1; i <= 100; i++) {
+//     var f = i % 3 == 0, b = i % 5 == 0;
+//     console.log(f ? b ? "FizzBuzz" : "Fizz" : b ? "Buzz" : i);
+//   }
