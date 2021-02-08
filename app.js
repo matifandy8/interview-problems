@@ -305,23 +305,6 @@
 
 // let test = [2, 2, 4, 4, 5];
 
-// const singleNumber = (array) => {
-//   countNumber = {};
-//   for (number of array) {
-//     if (countNumber[number] == undefined) {
-//       countNumber[number] = 1;
-//     } else {
-//       countNumber[number]++;
-//     }
-//     console.log(countNumber);
-//   }
-//   for (numberKey in countNumber) {
-//     if (countNumber[numberKey] == 1) {
-//       return numberKey;
-//     }
-//   }
-// };
-
 // ----------------------------------
 
 // CON Set()
@@ -391,3 +374,49 @@
 //     var f = i % 3 == 0, b = i % 5 == 0;
 //     console.log(f ? b ? "FizzBuzz" : "Fizz" : b ? "Buzz" : i);
 //   }
+
+// FIRST DUPLICATE
+// let test = [5, 2, 5, 4, 4, 5];
+
+// const firstDuplicate = (array) => {
+
+// };
+// console.log(firstDuplicate(test));
+
+// greatest number array
+// const array1 = [1, 3, 2, 4, 5];
+
+// console.log(Math.max(...array1));
+
+// const kidsWithCandies = (candies, extraCandies) => {
+//   greatestnumber = Math.max(...candies);
+//   for (let i = 0; i < candies.length; i++) {}
+// };
+
+// let test = [1, 2, 5, 4, 4, 5];
+// let ex = 3;
+
+//  PROBLEM LEETCODE KIDS WITH CANDIES
+//  1 line of code
+// const kidsWithCandies = (candies, extraCandies, max = Math.max(...candies)) => candies.map(candy => candy + extraCandies >= max);
+
+// ---------------
+// const kidsWithCandies = (candies, extraCandies) => {
+//     const max = Math.max(...candies);
+//     return candies.map(candy => candy + extraCandies >= max);
+//   };
+// -------------------
+// const recorreArray = (arr, extra) => {
+//   greatestnumber = Math.max(...arr);
+//   let anyBoxesChecked = [];
+//   for (let i = 0; i <= arr.length - 1; i++) {
+//     if (arr[i] + extra >= greatestnumber) {
+//       anyBoxesChecked.push(true);
+//     } else {
+//       anyBoxesChecked.push(false);
+//     }
+//   }
+//   return anyBoxesChecked;
+// };
+
+// console.log(recorreArray(test, ex));
