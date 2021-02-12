@@ -406,17 +406,94 @@
 //     return candies.map(candy => candy + extraCandies >= max);
 //   };
 // -------------------
-// const recorreArray = (arr, extra) => {
-//   greatestnumber = Math.max(...arr);
-//   let anyBoxesChecked = [];
-//   for (let i = 0; i <= arr.length - 1; i++) {
-//     if (arr[i] + extra >= greatestnumber) {
-//       anyBoxesChecked.push(true);
-//     } else {
-//       anyBoxesChecked.push(false);
-//     }
-//   }
-//   return anyBoxesChecked;
+
+// let test = [1, 2, 5, 4, 4, 5];
+
+// let smallerNumbersThanCurrent = function (nums) {
+//   const sorted = [...nums].sort((a, b) => a - b);
+//   console.log(sorted);
+//   return nums.map((num) => sorted.indexOf(num));
 // };
 
-// console.log(recorreArray(test, ex));
+// console.log(smallerNumbersThanCurrent(test));
+// ---------------------------------------
+// --------------------
+// function smallerNumbersThanCurrent(nums) {
+//   const sorted = Array.from(nums).sort((n1, n2) => n2 - n1);
+//   const map = new Map(
+//     sorted.map((num, index) => [num, nums.length - index - 1])
+//   );
+//   return nums.map((num) => map.get(num));
+// }
+//   Complexity:
+// Time O(NlogN)
+// Space O(N)
+
+// Example:
+// nums [8,1,2,2,3]
+
+// Sort nums by descending order
+// sorted [8,3,2,2,1]
+// Create map with counts
+// map: {8:4,3:3,2:1,1:0}
+// Return an array with counts stored in map
+// result: [4,0,1,1,3]
+
+// --------------------------------------
+
+// array1 = ["uno", "dos", "tres"];
+// array2 = ["tres", "dos", "uno"];
+
+// //Se ordenan ambos arreglos
+// array1.sort();
+// array2.sort();
+
+// // y se realiza la comparación de cada elemento
+// array1.length == array2.length &&
+//   array1.every(function (v, i) {
+//     return v === array2[i];
+//   });
+
+//   let items = this.backup.filter(p => (
+//     //Sí la longitud no es la misma son diferentes
+//     p.tags.length === tags.length && p.tags.every( item => tags.includes(item) )
+// ));
+
+// ------------
+// -------
+// --------------
+
+// arr1 = [0, 1, 2, 3, 4];
+// arr2 = [0, 1, 2, 2, 1];
+
+// var createTargetArray = function (nums, index) {
+//   // tiene que tener la misma longitud
+//   // nums.length == index.length
+//   // comparar los dos arrays
+//   let target = [];
+//   for (const i in nums) target.splice(index[i], 0, nums[i]);
+//   return target;
+//   // colocar el valor de nums en el indice de el valor del array index
+//   // si el primer valor de nums es 1 comparar con el primero del array index y ver que valor       tiene dependiendo del valor es el indice en donde colocarlo
+// };
+// console.log(createTargetArray(arr1, arr2));
+
+// var createTargetArray = function(nums, index) {
+//   let result=[]
+//   for(let number of nums){
+//       let idx = index.shift();
+//       result.splice(idx,0,number)
+//   }
+//   return result
+// };
+// const createTargetArray = (nums, idx) => {
+//   let result = [];
+
+//   for (let i = 0; i < nums.length; i++) {
+//     const num = nums[i]
+//     const currentIdx = idx[i];
+//     result.splice(currentIdx, 0, num)
+//   }
+
+//   return result;
+// };
