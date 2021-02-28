@@ -497,3 +497,294 @@
 
 //   return result;
 // };
+
+// let test = [1, 1, 0, 1, 1, 0, 1, 1, 0];
+// var findMaxConsecutiveOnes = function (nums) {
+//   let largestCount = 0;
+//   let currentCount = 0;
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] === 0) {
+//       currentCount = 0;
+//       console.log(currentCount);
+//     } else {
+//       currentCount++;
+//       console.log(currentCount);
+//     }
+//     if (currentCount > largestCount) largestCount = currentCount;
+//   }
+//   return largestCount;
+// };
+
+// console.log(findMaxConsecutiveOnes(test));
+
+// var findMaxConsecutiveOnes = function (nums) {
+//   let largest = 0;
+//   let current = 0;
+//   for (let i = 0; i < nums.length; i++) {
+//     nums[i] === 0 ? (current = 0) : current++;
+//     if (current > largest) largest = current;
+//   }
+//   return largest;
+// };
+
+// let test = [
+//   [1, 2, 3],
+//   [3, 3, 3],
+// ];
+
+// let maximumWealth = function (accounts) {
+//   let array = [];
+//   for (var i in accounts) {
+//     for (var j in accounts[i]) {
+//     }
+//     let totalarr = accounts[i].reduce((acc, el) => acc + el, 0);
+//     numero = Number(totalarr);
+//     array.push(typeof totalarr);
+//     console.log(totalarr);
+//     console.log(array);
+//   }
+//   console.log(Math.max(array));
+// };
+
+// console.log(maximumWealth(test));
+//   let totalarr1 = array1.reduce((acc, el) => acc + el, 0);
+
+// --------------------------------------------
+// var maximumWealth = function(accounts) {
+//     return Math.max(...accounts.map(account =>
+//         account.reduce((accumulator, current) => accumulator + current, 0)
+//     ))
+// };
+// ----------------------------------------------
+// var maximumWealth = function(accounts) {
+//     let temp = result = 0
+//     accounts.forEach(e=> {
+//         temp = e.reduce((acc,cur)=>acc+cur,0);
+//         result = Math.max(temp,result);
+//     })
+//     return result;
+// };
+// --------------------------
+
+// let arr = [1, 1, 1, 1];
+
+// const numIdenticalPairs = (array) => {
+//   let good = 0;
+//   for (let indexA = 0; indexA < array.length; indexA++) {
+//     for (let indexB = indexA + 1; indexB < array.length; indexB++) {
+//       if (array[indexA] == array[indexB] && indexA < indexB) {
+//         good++;
+//       }
+//     }
+//   }
+//   return good;
+// };
+
+// console.log(numIdenticalPairs(arr));
+// -----------------------------------------------
+// ---------------------------------------------
+// Use an object to store numbers (can also use array
+//  since this problem have constraint
+// of 1 <= nums[i] <= 100
+//   when new number is added to object,
+//  set 1 as value
+//   if current number already exist in object,
+//  add 1 to current value + add the value to count
+
+// const numIdenticalPairs = function(nums) {
+//   const map = {}
+//   let count = 0
+
+//   for (const number of nums) {
+//       if (map[number]) {
+//           count += map[number];
+//           map[number] += 1;
+//       } else {
+//           map[number] = 1;
+//       }
+//   }
+//   return count
+// };
+
+// test = [1, 2, 3, 4];
+
+// for (let index = 0; index < freq; index++) {
+//   newarray.push(index);
+// }
+
+// ---------------------------------------------
+// var decompressRLElist = function (nums) {
+//   return nums.reduce(
+//     (acc, cur, i, arr) =>
+//       i % 2 ? [...acc, ...Array(arr[i - 1]).fill(cur)] : acc,
+//     []
+//   );
+// };
+
+// console.log(decompressRLElist(test));
+
+// ----------------------
+// time O(n) space O(n)
+// var decompressRLElist = function(nums) {
+//     let result = []
+
+//     for(let i=0; i<nums.length; i+=2) {
+//         const frequency = nums[i]
+//         const value = nums[i+1]
+
+//         // result = [...result, ...new Array(frequency).fill(value)]
+//         result.push(...new Array(frequency).fill(value))
+//     }
+
+//     return result
+// };
+
+// ------------------------------------------------
+// El operador de propagación spread operator
+// permite que una expresión sea expandida en
+//  situaciones donde se esperan múltiples argumentos
+//   (llamadas a funciones) o múltiples elementos
+//    (arrays literales).
+// var foo = [ 'En', 'un', 'lugar', 'de', 'la', 'Mancha' ],
+//     bar = [ 'de', 'cuyo', 'nombre', 'no', 'quiero', 'acordarme' ],
+
+//     // Old Style
+//     oldStyle = foo.concat( bar ),
+
+//     // ECMAScript 6 style
+//     ES6Style = [ ...foo, ...bar ];
+
+// console.info( oldStyle );
+// // [ "En", "un", "lugar", "de", "la", "Mancha", "de",
+//     "cuyo", "nombre", "no", "quiero", "acordarme" ]
+
+// console.info( ES6Style );
+// // [ "En", "un", "lugar", "de", "la", "Mancha", "de",
+//     "cuyo", "nombre", "no", "quiero", "acordarme" ]
+// --------------------------------------------
+
+// var decompressRLElist = function (nums) {
+//   const result = [];
+
+//   for (let i = 1; i < nums.length; i += 2) {
+//     result.push(...new Array(nums[i - 1]).fill(nums[i]));
+//   }
+
+//   return result;
+// };
+
+// let test = [-5, 1, 5, 0, -7];
+// var largestAltitude = function (gain) {
+//   for (let i = 1; i < gain.length; i++) gain[i] += gain[i - 1];
+
+//   return Math.max(0, ...gain);
+// };
+
+// console.log(largestAltitude(test));
+// ----------------------
+// ------------------
+// test = [
+//   [1, 1],
+//   [3, 4],
+//   [-1, 0],
+// ];
+// const minTimeToVisitAllPoints = function (points) {
+//   let countertotalseconds = 0;
+//   for (let i = 0; i < points.length - 1; i++) {
+//     let firstXYCoordinate = points[i];
+//     let secondXYCoordinate = points[i + 1];
+//     let diff1 = Math.abs(firstXYCoordinate[0] - secondXYCoordinate[0]);
+//     let diff2 = Math.abs(firstXYCoordinate[1] - secondXYCoordinate[1]);
+//     let maximadiff = Math.max(diff1, diff2);
+//     countertotalseconds += maximadiff;
+//   }
+//   return countertotalseconds;
+// };
+
+// console.log(minTimeToVisitAllPoints(test));
+
+// const minTimeToVisitAllPoints = points => {
+//   let times = 0;
+//   for (let i = 1; i < points.length; ++i) {
+//     const p0 = points[i - 1];
+//     const p1 = points[i];
+//     times += Math.max(Math.abs(p1[0] - p0[0]), Math.abs(p1[1] - p0[1]));
+//   }
+//   return times;
+// };
+// Time complexity: O(n)
+// Space complexity: O(1)
+
+// let minTimeToVisitAllPoints = function(points) {
+//   let i = 0;
+//   let result = 0;
+//   while(i < points.length - 1) {
+//       let x= Math.abs(points[i][0] - points[i+1][0]);
+//       let y= Math.abs(points[i][1] - points[i+1][1]);
+//       result = result + Math.max(x,y);
+//       i++;
+//   }
+
+//   return result;
+// };
+
+// Input = ["h", "e", "l", "l", "o"];
+
+// const reverseString = function (s) {
+//   stringreverse = s.reverse();
+//   return stringreverse;
+// };
+
+// console.log(reverseString(Input));
+
+// var reverseString = (s) => {
+//     for (let [a, b] = [0, s.length - 1]; a < b; a++, b--) {
+//         [s[a], s[b]] = [s[b], s[a]]
+//     }
+// };
+
+// const invertirManual = arreglo => {
+//     // Guardar de una vez la longitud para hacer más legible el código
+//     let longitudDelArreglo = arreglo.length;
+//     // Recorrer arreglo hasta la mitad. Si es impar, se va al entero anterior más
+//     // próximo. P. ej. 5 / 2 => 2
+//     for (let x = 0; x < longitudDelArreglo / 2; x++) {
+//       // Respaldar el valor actual
+//       let temporal = arreglo[x];
+//       // Calcular el índice contrario, es decir, el del otro lado de la mitad; el cual irá descendiendo
+//       let indiceContrario = longitudDelArreglo - x - 1;
+//       // En el actual ahora está el del otro lado
+//       arreglo[x] = arreglo[indiceContrario];
+//       // Y en el otro lado, el que estaba originalmente en el actual
+//       arreglo[indiceContrario] = temporal;
+//     }
+
+//     // No regresamos nada porque ya modificamos al arreglo internamente
+//   };
+// -------------------------
+// --------------------
+// const arrayOfDigits = Array.from(String(numToSeparate), Number);
+
+// console.log(arrayOfDigits);   //[1,2,3,4,5]
+
+// test = [12, 345, 2, 6, 7896];
+// const findNumbers = function (nums) {
+//   evencuantity = 0;
+//   nums.forEach(function (item) {
+//     arrayOfDigits = Array.from(String(item), Number);
+//     cuantitydigits = arrayOfDigits.length;
+//     if (cuantitydigits % 2 == 0) {
+//       evencuantity++;
+//     }
+//   });
+//   return evencuantity;
+// };
+//--- var findNumbers = nums => nums.reduce( (a, c) => c.toString().length % 2 === 0 ? a + 1 : a, 0 )
+// var findNumbers = function(nums) {
+//     let result = 0;
+//     nums.forEach((value, index) => {
+//         result += (value + '').length % 2 ? 0 : 1;
+//     });
+//     return result;
+// };
+// console.log(findNumbers(test));
