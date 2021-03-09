@@ -788,3 +788,74 @@
 //     return result;
 // };
 // console.log(findNumbers(test));
+
+// test = [
+//   [1, 1, 0, 0],
+//   [1, 0, 0, 1],
+//   [0, 1, 1, 1],
+//   [1, 0, 1, 0],
+// ];
+// var flipAndInvertImage = function (A) {
+//     let flipImage = [];
+//     let newA = [];
+//     let value = 0;
+//     // Loop trough array
+//     A.forEach((arr) => {
+//       // Reverse array
+//       let rArr = arr.reverse();
+//       rArr.forEach((cv) => {
+//         if (cv == 0) value = 1;
+//         else if (cv == 1) value = 0;
+//         // Push value to array
+//         newA.push(value);
+//       });
+//       // push array to array
+//       flipImage.push(newA);
+//       // empty array
+//       newA = [];
+//     });
+//     return flipImage;
+//   };
+
+// console.log(flipAndInvertImage(test));
+// -----------------
+// -----------
+// ONE LINE
+// const flipAndInvertImage = A => A.map(x => x.reverse().map(y => y ? 0 : 1))
+// -----------------------
+
+// test = [10, 2, 5, 2];
+
+// var maxProduct = function (nums) {
+//   //ordeno de mayor a menor
+//   //resultado = calculo
+//   for (let x = 0; x < nums.length; x++) {
+//     for (let i = 0; i < nums.length - x - 1; i++) {
+//       if (nums[i] < nums[i + 1]) {
+//         let tmp = nums[i + 1];
+//         nums[i + 1] = nums[i];
+//         nums[i] = tmp;
+//       }
+//     }
+//   }
+//   maxproduct = (nums[0] - 1) * (nums[1] - 1);
+//   return maxproduct;
+// };
+
+// var maxProduct = function(nums) {
+//     const sorted = nums.sort((a, b) => a - b);
+//     return (sorted[nums.length - 1] - 1) * (sorted[nums.length - 2] - 1);
+//   };
+
+// console.log(maxProduct(test));
+
+let test1 = [1, 2];
+let test2 = [3];
+
+const findMedianSortedArrays = function (nums1, nums2) {
+  let array3 = nums1.concat(nums2);
+  let array3ordenado = array3.sort();
+  return array3ordenado.length / 2;
+};
+
+console.log(findMedianSortedArrays(test1, test2));
