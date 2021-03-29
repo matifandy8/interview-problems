@@ -849,13 +849,102 @@
 
 // console.log(maxProduct(test));
 
-let test1 = [1, 2];
-let test2 = [3];
+// let test1 = [1, 2];
+// let test2 = [3];
 
-const findMedianSortedArrays = function (nums1, nums2) {
-  let array3 = nums1.concat(nums2);
-  let array3ordenado = array3.sort();
-  return array3ordenado.length / 2;
-};
+// const findMedianSortedArrays = function (nums1, nums2) {
+//   let array3 = nums1.concat(nums2);
+//   let array3ordenado = array3.sort();
+//   return array3ordenado.length / 2;
+// };
 
-console.log(findMedianSortedArrays(test1, test2));
+// console.log(findMedianSortedArrays(test1, test2));
+
+// let test = 5;
+// const sumZero = function (n) {
+//   if (n === 1) {
+//     return [0];
+//   } else if (n === 2) {
+//     return [1, -1];
+//   } else if (n === 3) {
+//     return [n, -n, 0];
+//   }
+
+//   const output = [n, -n];
+
+//   if (n % 2 !== 0) {
+//     output.push(0);
+//   }
+
+//   for (let i = output.length; i < n; i++) {
+//     n -= 1;
+//     output.push(n, n * -1);
+//   }
+
+//   return output;
+// };
+
+// console.log(sumZero(test));
+
+// test = [3, 1, 2, 4];
+
+// const sortArrayByParity = function (A) {
+//   let output = [];
+//   for (let n = 0; n < A.length; n++) {
+//     if (A[n] % 2 == 0) {
+//       output.push(A[n]);
+//     }
+//   }
+//   return output;
+// };
+
+// console.log(sortArrayByParity(test));
+
+// let test1 = "anagram";
+// let test2 = "nagaram";
+
+// const isAnagram = function (s, t) {
+//   array1 = s.split("");
+//   array2 = t.split("");
+//   ordenado1 = array1.sort();
+//   ordenado2 = array2.sort();
+//   string1 = ordenado1.join("");
+//   string2 = ordenado2.join("");
+//   console.log(string1);
+//   console.log(string2);
+
+//   if (string1 === string2) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+// console.log(isAnagram(test1, test2));
+
+// const isAnagram = (s, t) =>  {
+//   let one = s.split("").sort().join();
+//   let two = t.split("").sort().join();
+//   return one === two;
+// };
+
+// let teststartTime = [1, 1, 1, 1];
+// let testendTime = [1, 3, 2, 4];
+// let testqueryTime = 7;
+
+// const busyStudent = function (startTime, endTime, queryTime) {
+//   let counter = 0;
+//   for (let i = 0; i < startTime.length; i++) {
+//     if (startTime[i] <= queryTime && queryTime <= endTime[i]) counter++;
+//   }
+//   return counter;
+// };
+
+// console.log(busyStudent(teststartTime, testendTime, testqueryTime));
+
+let testOne = [3];
+let testTwo = [-2, -1];
+
+const findMedianSortedArrays = function (nums1, nums2) {};
+
+console.log(findMedianSortedArrays(testOne, testTwo));
