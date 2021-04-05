@@ -942,9 +942,65 @@
 
 // console.log(busyStudent(teststartTime, testendTime, testqueryTime));
 
-let testOne = [3];
-let testTwo = [-2, -1];
+// let test = [1, 1, 1, 1, 1];
 
-const findMedianSortedArrays = function (nums1, nums2) {};
+// const singleNumber = (array) => {
+//   countSet = new Set();
+//   sum = 0;
+//   for (number of array) {
+//     if (countSet.has(number)) {
+//       countSet.delete(number);
+//     } else {
+//       countSet.add(number);
+//     }
+//   }
+//   for (let item of countSet) sum += item;
+//   return sum;
+// };
+// console.log(singleNumber(test));
 
-console.log(findMedianSortedArrays(testOne, testTwo));
+// test = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+
+// const maxSubArray = function (nums) {
+//   let max = nums[0];
+//   let current = Math.max(max, 0);
+
+//   for (let i = 1; i < nums.length; i += 1) {
+//     current += nums[i];
+//     max = Math.max(max, current);
+//     current = Math.max(current, 0);
+//   }
+
+//   return max;
+// };
+
+// console.log(maxSubArray(test));
+
+// let test = [1, 1, 2, 2, 2];
+
+// var majorityElement = function (nums) {
+//   var obj = {};
+
+//   for (var i = 0; i < nums.length; i++) {
+//     obj[nums[i]] = obj[nums[i]] + 1 || 1;
+//     if (obj[nums[i]] > nums.length / 2) return nums[i];
+//   }
+// };
+
+// var majorityElement = function(nums) {
+//     nums.sort((a,b) => a - b);
+
+//    return nums[Math.floor(nums.length/2)];
+// };
+
+// console.log(majorityElement(test));
+
+// var sortedSquares = function (nums) {
+//   newarray = [];
+//   for (let index = 0; index < nums.length; index++) {
+//     let element = nums[index];
+//     elementosquare = element * element;
+//     newarray.push(elementosquare);
+//   }
+//   return newarray.sort((a, b) => a - b);
+// };
